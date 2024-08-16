@@ -1,9 +1,28 @@
 import logo from "../assets/logo-white.webp";
+import { motion } from "framer-motion";
 export default function Footer() {
+    const text = "Let's Talk";
+
+    // Define the animation variants for each character
+    const variants = {
+        initial: { y: 0, color: "#ffffff" },
+      animate: (i) => ({
+        y: [0, -20, 0],
+        color: ["#ffffff", "#f06595", "#ff6b6b", "#ffffff"], 
+        transition: {
+          delay: i * 0.2, // Delay each character animation to create a wave effect
+          duration: 1, // Duration of each character animation
+          repeat: Infinity, // Infinite loop
+          repeatDelay: 0.1,
+          repeatType: "loop", // Seamless loop
+          ease: "easeInOut", // Smooth easing
+        },
+      }),
+    };
   return (
     <footer className='bg-black'>
       {/* first part  */}
-      <div className="flex flex-col md:flex-row md:justify-around md:items-center gap-5  border-b-2 border-gray-600 p-8 md:p-0">
+      <div className="flex flex-col md:flex-row md:justify-around md:items-center gap-8  border-b-2 border-gray-600 p-8 md:p-0">
         <div>
           <img className="mb-7" src={logo} alt="logo" />
 
@@ -35,9 +54,22 @@ export default function Footer() {
               Instagram
             </a>
           </div>
-        </div>
-        <div>
-          <h1 className="text-5xl md:text-9xl text-center text-white font-bold font-sans">{`Let's Talk`}</h1>
+        </div> 
+        {/* animation  */}
+        <div className="flex justify-center">
+          {/* Map over each character in the text */}
+          {text.split("").map((char, index) => (
+            <motion.span
+              key={index}
+              custom={index}
+              variants={variants}
+              initial="initial"
+              animate="animate"
+              className="text-5xl md:text-9xl text-white font-bold font-sans"
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
         </div>
       </div>
       {/* bottom  */}
