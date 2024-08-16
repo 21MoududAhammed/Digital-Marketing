@@ -27,7 +27,7 @@ export default function Footer() {
           <img className="mb-7" src={logo} alt="logo" />
 
           <div className="">
-            <p className="text-sm text-gray-500 max-w-60">
+            <p className="text-base font-semibold text-gray-500 max-w-60">
               When do they work well, and when do they on us and finally, when
               do we actually need how can we avoid them.
             </p>
