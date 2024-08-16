@@ -34,22 +34,22 @@ export default function Footer() {
           </div>
         </div>
         <div className='text-center text-white'>
-          <div className="md:p-8 py-8  border-2 border-gray-600   ">
+          <div className="md:p-8 py-8  border-2 border-gray-600 font-semibold hover:bg-white hover:text-black   ">
             <a className="text-xl" href="">
               Facebook
             </a>
           </div>
-          <div className="p-8  border-2 border-gray-600">
+          <div className="p-8  border-2 border-gray-600 font-semibold hover:bg-white hover:text-black">
             <a className="text-xl" href="">
               Twitter
             </a>
           </div>
-          <div className="p-8  border-2 border-gray-600">
+          <div className="p-8  border-2 border-gray-600 font-semibold hover:bg-white hover:text-black">
             <a className="text-xl" href="">
               LinkedIn
             </a>
           </div>
-          <div className="p-8  border-2 border-gray-600">
+          <div className="p-8  border-2 border-gray-600 font-semibold hover:bg-white hover:text-black">
             <a className="text-xl" href="">
               Instagram
             </a>
