@@ -8,9 +8,10 @@ export default function App() {
   return (
     <>
       {/* <FeaturedWork /> */}
-      <Pricing/>
-      <PositiveIntroduction />
+
       <Brands />
+      <PositiveIntroduction />
+      <Pricing />
       <Footer />
     </>
   );
